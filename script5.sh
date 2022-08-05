@@ -1,4 +1,4 @@
 #!/bin/bash
 REGION=$@
-OUTPUT='json'
-aws ec2 describe-vpcs --region $REGION --output $OUTPUT | jq ".Vpcs[].VpcId"
+FORMAT='json'
+aws ec2 describe-vpcs --region $REGION --output $FORMAT | jq ".Vpcs[].VpcId"
